@@ -1,0 +1,74 @@
+/* book-detail.component.css */
+
+.book-detail-container {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(45deg, #1e272e, #34495e);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s linear infinite;
+    padding: 20px;
+    color: #fff;
+    /* White text color for contrast */
+}
+
+.book-data {
+    flex: 1;
+    padding: 20px;
+}
+
+.book-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 10px 0;
+}
+
+p strong {
+    color: #3498db;
+    /* Highlight color */
+}
+
+.cover-photo {
+    max-width: 100%;
+    animation: imageAnimation 6s ease infinite;
+}
+
+@keyframes imageAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

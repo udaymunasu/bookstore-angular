@@ -1,0 +1,55 @@
+/* book-list.component.scss */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  
+    h2 {
+      margin-bottom: 20px;
+    }
+  
+    .book-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+  
+    .book-card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+  
+      p {
+        margin: 5px 0;
+      }
+  
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+  
+      .image-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+  
+        img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 5px;
+        }
+      }
+    }
+  
+    /* Media query for responsive layout */
+    @media (max-width: 600px) {
+      .book-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+    }
+  }
+  

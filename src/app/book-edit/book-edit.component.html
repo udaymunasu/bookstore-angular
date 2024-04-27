@@ -1,0 +1,42 @@
+<div class="edit-book-container">
+  <h2 class="edit-book-header">Edit Book</h2>
+  <form [formGroup]="bookForm" (ngSubmit)="editBook()" class="edit-book-form">
+    <div class="form-field">
+      <label for="isbn">ISBN:</label>
+      <input type="text" id="isbn" formControlName="isbn" />
+    </div>
+    <div class="form-field">
+      <label for="title">Title:</label>
+      <input type="text" id="title" formControlName="title" />
+    </div>
+    <div class="form-field">
+      <label for="category">category:</label>
+      <input type="text" id="category" formControlName="category" />
+    </div>
+    <div class="form-field">
+      <label for="author">Author:</label>
+      <input type="text" id="author" formControlName="author" />
+    </div>
+    <div class="form-field">
+      <label for="description">Description:</label>
+      <textarea id="description" formControlName="description"></textarea>
+    </div>
+    <div class="form-field">
+      <label for="publishedYear">Published Year:</label>
+      <input type="text" id="publishedYear" formControlName="publishedYear" />
+    </div>
+    <div class="form-field">
+      <label for="publisher">Publisher:</label>
+      <input type="text" id="publisher" formControlName="publisher" />
+    </div>
+    <div class="form-field">
+      <label for="price">Price:</label>
+      <input type="text" id="price" formControlName="price" />
+    </div>
+    <div class="form-field">
+      <label for="coverPhoto">Cover Photo:</label>
+      <input type="file" id="coverPhoto" formControlName="coverPhoto"   (change)="onFileSelected($event)" />
+    </div>
+    <button type="submit" class="edit-book-button">Update Book</button>
+  </form>
+</div>

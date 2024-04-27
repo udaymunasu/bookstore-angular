@@ -1,0 +1,19 @@
+<div class="app-container">
+  <app-header *ngIf="isLoggedin"></app-header>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer></app-footer>
+</div>
+
+
+
+
+
+<!-- <nav class="topnav">
+  <a routerLink="/home">Home</a>
+  <a routerLink="">Show Books</a>
+  <a routerLink="/book-create">Add Book</a>
+  <a routerLink="/book/create">About</a>
+</nav> -->
+

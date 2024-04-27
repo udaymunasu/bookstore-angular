@@ -1,0 +1,22 @@
+<!-- book-detail.component.html -->
+<div class="book-detail-container">
+  <div class="book-image">
+    <div *ngIf="book.cover_photo">
+      <img
+        [src]="getCoverPhotoUrl(book.cover_photo)"
+        alt="Cover Photo"
+        class="cover-photo"
+      />
+    </div>
+  </div>
+  <div class="book-data">
+    <h2>{{ book.title }}</h2>
+    <p><strong>Author:</strong> {{ book.author }}</p>
+    <p><strong>Description:</strong> {{ book.description }}</p>
+    <p><strong>ISBN:</strong> {{ book.isbn }}</p>
+    <p><strong>Category:</strong> {{ book.category }}</p>
+    <p><strong>Published Year:</strong> {{ book.published_year }}</p>
+    <p><strong>Publisher:</strong> {{ book.publisher }}</p>
+    <p><strong>Price:</strong> {{ book.price }} &#x24;</p>
+  </div>
+</div>

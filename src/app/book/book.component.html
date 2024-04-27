@@ -1,0 +1,33 @@
+<!-- book-list.component.html -->
+<div class="container">
+  <h2>Book List</h2>
+  <div *ngIf="books.length === 0">
+    <p>No books found.</p>
+  </div>
+  <div *ngIf="books.length > 0" class="book-list">
+    <div *ngFor="let book of books" class="book-card" [routerLink]="['/books', book._id]">
+      <p><strong>Title:</strong> {{ book.title }}</p>
+      <p><strong>Author:</strong> {{ book.author }}</p>
+      <p><strong>ISBN:</strong> {{ book.isbn }}</p>
+      <p><strong>CATEGORY:</strong> {{ book.category }}</p>
+
+      <p><strong>Description:</strong> {{ book.description }}</p>
+      <p><strong>Published Year:</strong> {{ book.published_year }}</p>
+      <p><strong>Publisher:</strong> {{ book.publisher }}</p>
+      <p><strong>Price:</strong> {{ book.price }} &#x24;</p>
+      <div *ngIf="book.cover_photo">
+        <p><strong>Cover Photo:</strong></p>
+        <img [src]="getCoverPhotoUrl(book.cover_photo)" alt="Cover Photo" class="cover-photo">
+      </div>
+      <div *ngIf="book.images && book.images.length > 0">
+        <p><strong>Images:</strong></p>
+        <div class="image-gallery">
+          <img *ngFor="let imageUrl of getImagesUrls(book.images)" [src]="imageUrl" alt="Image">
+        </div>
+      </div>
+      <button (click)="editBook(book._id)">Edit</button>
+      <!-- You can also add an option to delete the book -->
+      <!-- <button (click)="deleteBook(book._id)">Delete</button> -->
+    </div>
+  </div>
+</div>
